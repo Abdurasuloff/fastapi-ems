@@ -70,10 +70,14 @@ source myenv/bin/activate
 pip install -r requirements.txt 
 ```
 3. .env faylini .env.example fayliga qarab kerakli ma'lumotlar bilan to'ldiring
-4. Serverni ishga tushuring:
-
+4. Databaseni migrate qiling:
 ```bash
 cd app
+alembic upgrade head
+```
+5. Serverni ishga tushuring:
+
+```bash
 fastapi dev
 ```
 
